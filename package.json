@@ -1,0 +1,40 @@
+{
+  "name": "ionic2-tags-input",
+  "version": "1.0.0",
+  "description": "Tag input component for Ionic 2",
+  "main": "./dist/tag-input.js",
+  "typings": "./dist/tag-input.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "node_modules/.bin/ngc && copyfiles ./src/*.scss ./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sub5111/ionic2-tag-input"
+  },
+  "keywords": [
+    "ionic2",
+    "tags",
+    "angular2",
+    "component"
+  ],
+  "author": "Adrian Narloch",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "2.2.1",
+    "@angular/compiler": "2.2.1",
+    "@angular/compiler-cli": "2.2.1",
+    "@angular/core": "2.2.1",
+    "@angular/forms": "2.2.1",
+    "@angular/http": "2.2.1",
+    "@angular/platform-browser": "2.2.1",
+    "@angular/platform-browser-dynamic": "2.2.1",
+    "@angular/platform-server": "2.2.1",
+    "ionic-angular": ">=2.0.0-rc.5",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "0.6.26"
+  },
+  "devDependencies": {
+    "typescript": "2.0.9",
+  }
+}
