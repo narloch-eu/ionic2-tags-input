@@ -7,5 +7,7 @@ import { TagsInputComponent } from './tags-input.component';
   declarations: [
     TagsInputComponent,
   ],
+  exports: [ TagsInputComponent ],
+  entryComponents: [ TagsInputComponent ],
 })
 export class TagsInputModule {}
