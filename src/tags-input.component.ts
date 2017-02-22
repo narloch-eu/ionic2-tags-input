@@ -11,25 +11,15 @@ import * as _ from "lodash";
 */
 
 @Component({
-  selector: 'tag-input',
-  template: '<div>' +
-  '<button *ngFor="let value of values; let i=index" ion-button item-right icon-right (click)="removeItem(i)" >' +
-    '{{ value.name }}' +
-    '&nbsp;' +
-    '<ion-icon name="close"></ion-icon>' +
-  '</button>' +
-  '<button type="button" ion-button icon-left outline (click)="addItem()" [disabled]="isDisabled">' +
-    '<ion-icon name="add"></ion-icon>' +
-    '{{ placeholder }}' +
-  '</button>' +
-  '</div>',
+  selector: 'tags-input',
+  templateUrl: 'tags-input.component.html',
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => TagInputComponent),
+    useExisting: forwardRef(() => TagsInputComponent),
     multi: true
   }],
 })
-export class TagInputComponent implements ControlValueAccessor {
+export class TagsInputComponent implements ControlValueAccessor {
 
   @Output() onTagAdded:EventEmitter<any> = new EventEmitter<any>();
   @Output() onTagRemoved:EventEmitter<any> = new EventEmitter<any>();
