@@ -2,7 +2,8 @@
   "name": "ionic2-tags-input",
   "version": "1.0.0",
   "description": "Tag input component for Ionic 2",
-  "main": "ionic2-tas-input.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "node_modules/.bin/ngc && copyfiles ./src/*.scss ./dist/"

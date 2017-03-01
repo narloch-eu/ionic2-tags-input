@@ -1,26 +1,32 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "removeComments": true,
     "sourceMap": true,
-    "outDir": "dist-final",
-    "typeRoots": [
-      "node_modules/@types"
+    "lib": [
+      "dom",
+      "es2015"
     ],
-    "types": [
-      "core-js"
-    ],
-    "declaration": true
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "./dist"
   },
-  "include": [
-    "dist/**/*"
-  ],
   "exclude": [
-    "node_modules",
-    "src/**/*"
-  ]
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "files": [
+    "ionic-img-viewer.ts",
+    "src/tags-input.component.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true
+  }
 }
