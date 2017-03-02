@@ -22,7 +22,7 @@
     "rewriteTsconfig": false
   },
   "files": [
-    "ionic-img-viewer.ts",
+    "ionic2-tags-input.ts",
     "src/tags-input.component.ts"
   ],
   "angularCompilerOptions": {
