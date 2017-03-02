@@ -6,7 +6,7 @@
   "types": "ionic2-tags-input.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc && copyfiles ./src/ ./dist/"
+    "prepublish": "tsc && cp src/tags-input.component.html dist/src"
   },
   "repository": {
     "type": "git",
