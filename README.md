@@ -1,5 +1,5 @@
 # Ionic2 Tags Input
-**Ionic 2** Module that allows to write the content as popular tags form.
+**Ionic 2** Module that allows to write the content as a popular tags form.
 
 ## Features
 - Custom labels and placeholders
@@ -36,13 +36,13 @@ import { TagsInputModule } from 'ionic2-tags-input';
 
 Bind component to formControl or ngModel
 ```html
-<tags-input formControlName="birds" ></tags-input>
+<tags-input formControlName="animals"></tags-input>
 ```
 
 Form structure
 ```typescript
   public animals:FormGroup =  this.formBuilder.group({
-    birds: [
+    animals: [
         [
             {
                 'name': 'Gazelle'
