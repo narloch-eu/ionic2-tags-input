@@ -1,12 +1,11 @@
 {
   "name": "ionic2-tags-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tag input component for Ionic 2",
-  "main": "ionic2-tags-input.js",
-  "types": "ionic2-tags-input.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc && cp src/tags-input.component.html dist/src"
+    "prepublish": "rm -R dist && node_modules/.bin/ngc -p tsconfig-ngc.json"
   },
   "repository": {
     "type": "git",
@@ -36,6 +35,6 @@
     "@types/lodash": "ts2.0"
   },
   "devDependencies": {
-    "typescript": "^2.0.9"
+    "typescript": "^2.0.10"
   }
 }

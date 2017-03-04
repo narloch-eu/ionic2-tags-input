@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "outDir": "dist",
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "declaration": true,
+    "stripInternal": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "src/index.ts",
+    "src/tags-input.component.ts",
+    "src/tags-input.module.ts"
+  ],
+  "paths": {
+    "@angular/core": ["node_modules/@angular/core"],
+    "rxjs/*": ["node_modules/rxjs/*"]
+  },
+  "typeRoots": [
+    "../node_modules/@types"
+  ],
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true,
+    "genDir": "dist",
+    "strictMetadataEmit": true,
+    "skipMetadataEmit" : true
+  }
+}
