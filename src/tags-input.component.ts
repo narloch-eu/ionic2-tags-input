@@ -19,7 +19,7 @@ import * as _ from "lodash";
   '</button>' +
   '<button type="button" ion-button icon-left outline (click)="addItem()" [disabled]="isDisabled">' +
   '<ion-icon name="add"></ion-icon>' +
-  '{{ placeholder }}' +
+  '{{ buttonPlaceholder }}' +
   '</button>',
   providers: [{
     provide: NG_VALUE_ACCESSOR,
@@ -32,7 +32,12 @@ export class TagsInputComponent implements ControlValueAccessor {
   @Output() onTagAdded:EventEmitter<any> = new EventEmitter<any>();
   @Output() onTagRemoved:EventEmitter<any> = new EventEmitter<any>();
   @Input() maxTags: number;
-  @Input() placeholder: string;
+  @Input() buttonPlaceholder: string = 'Add';
+  @Input() alertTitlePlaceholder: string;
+  @Input() alertInputPlaceholder: string;
+  @Input() alertButtonPlaceholder: string;
+  @Input() wordLengthRestrictionMsg: string;
+  @Input() maxItemsRestrictionMsg: string;
   @Input() maxWordLength: number;
   @Input() allowDuplicates: boolean = true;
 
@@ -65,16 +70,16 @@ export class TagsInputComponent implements ControlValueAccessor {
 
   public addItem(): void {
     this.alertCtrl.create({
-      title: 'Add item',
+      title: this.alertTitlePlaceholder || 'Add item',
       inputs: [
         {
           name: 'name',
-          placeholder: 'Type text'
+          placeholder: this.alertInputPlaceholder || 'Type text'
         },
       ],
       buttons: [
         {
-          text: 'OK',
+          text: this.alertButtonPlaceholder || 'OK',
           handler: (data: any) => {
             data.index = this.values.length;
             if (data.name && !this.checkDuplicatesRestriction(data.name) && !this.checkMaxWordLengthRestriction(data.name)) {
@@ -106,7 +111,7 @@ export class TagsInputComponent implements ControlValueAccessor {
 
   private checkDuplicatesRestriction(name: string): boolean {
     let duplicatesRestrictionError = this.toastCtrl.create({
-      message: 'Error: Duplicates are not allowed',
+      message: this.maxItemsRestrictionMsg || 'Error: Duplicates are not allowed',
       duration: 3000
     });
 
@@ -121,7 +126,7 @@ export class TagsInputComponent implements ControlValueAccessor {
 
   private checkMaxWordLengthRestriction(name: string): boolean {
     let maxWordLengthRestrictionError = this.toastCtrl.create({
-      message: 'Error: This word is too long',
+      message: this.wordLengthRestrictionMsg || 'Error: This word is too long',
       duration: 3000
     });
 
