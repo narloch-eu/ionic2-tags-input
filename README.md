@@ -3,8 +3,8 @@
 
 ## Features
 - Custom labels and placeholders
-- Max word's length restriction
-- Max item's amount restriction
+- Maximum length of word restriction
+- Maximum amount of items restriction
 - Prevent duplicates restriction
 - Callback fn after added or removed tag
 
