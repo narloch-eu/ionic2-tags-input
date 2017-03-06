@@ -1,5 +1,5 @@
 # Ionic2 Tags Input
-**Ionic 2** Module that allows to write the content as a popular tags form.
+**Ionic 2** Module that allows to write the content in popular tags form.
 
 ## Features
 - Custom labels and placeholders
@@ -60,11 +60,11 @@ Form structure
 
 | Name | Type | Description | Default Value |
 | --- | --- | --- | --- |
-| maxTags | number | Number of tags allowed. If value is achieved add button becomes disabled | N/A |
-| maxWordLength | number | Maximum length of word/sentence | N/A |
-| allowDuplicates | boolean | Allow to duplicates | false |
-| buttonLabel | string | Label of adding button | Add |
-| alertTitleLabel | string | Title of the alert modal | Add item |
+| maxTags | number | Number of tags allowed. If maximum value is achieved, add button becomes disabled | N/A |
+| maxWordLength | number | Maximum length of the word/sentence | N/A |
+| allowDuplicates | boolean | Allow duplicates | false |
+| buttonLabel | string | Add button label | Add |
+| alertTitleLabel | string | The title of alert | Add item |
 | alertInputPlaceholder | string | Placeholder of the input inside the alert modal | Type text |
 | alertButtonLabel | string | Label of the alert button | OK |
 | wordLengthRestrictionMsg | string | Text displayed if word is too long | Error: This word is too long |

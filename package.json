@@ -1,6 +1,6 @@
 {
   "name": "ionic2-tags-input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Tag input component for Ionic 2",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
