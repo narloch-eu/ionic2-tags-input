@@ -73,6 +73,6 @@ Form structure
 ### @Outputs
 
 | Attribute Name | Type | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | onTagAdded | fn | Callback fn after added tag |
 | onTagRemoved | fn | Callback fn after removed tag |
