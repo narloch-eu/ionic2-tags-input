@@ -1,5 +1,5 @@
 # Ionic2 Tags Input
-**Ionic 2** Module that allows to write the content in popular tags form.
+**Ionic 2** Module which allows to write the content in popular tags form.
 
 ## Features
 - Custom labels and placeholders
@@ -74,5 +74,5 @@ Form structure
 
 | Attribute Name | Type | Description |
 | --- | --- | --- | --- |
-| onTagAdded | fn | Callback fn after added tag
-| onTagRemoved | fn | Callback fn after removed tag
+| onTagAdded | fn | Callback fn after added tag |
+| onTagRemoved | fn | Callback fn after removed tag |
